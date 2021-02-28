@@ -1,9 +1,7 @@
 // inspired by https://exercism.io/tracks/javascript/exercises/etl/solutions/91f99a3cca9548cebe5975d7ebca6a85
 // your job is to finish writing these functions and variables that we've named //
 // don't change the names or your program won't work as expected. //
-/*
-         letterPoints += `Points for '${word[i]}': ${pointValue}\n`
-         */
+
 
 const input = require("readline-sync");
 
@@ -16,7 +14,7 @@ const oldPointStructure = {
   8: ['J', 'X'],
   10: ['Q', 'Z']
 };
-/*
+
 function oldScrabbleScorer(word) {
   word = word.toUpperCase();
   let letterPoints = "";
@@ -31,7 +29,7 @@ function oldScrabbleScorer(word) {
   }
   return letterPoints;
 }
-*/
+
 function transform(oldPoints) {
   let newPointStructure = {};
   for (item in oldPoints) {
@@ -78,10 +76,6 @@ function vowelBonusScorer(word) {
   return letterPoint;
 }
 
-
-
-
-
 let simpleScore = {
   name: 'Simple Score',
   description: 'Each letter is worth 1 point.',
@@ -99,14 +93,6 @@ let scrabbleScore = {
   description: 'The traditional scoring algorithm.',
   scoreFunction: scrabbleScorer
 };
-
-/*
-let scrabbleScore = {
-  name: 'Scrabble',
-  description: 'The traditional scoring algorithm.',
-  scoreFunction: oldScrabbleScorer
-};
-*/
 
 const scoringAlgorithms = [simpleScore, vowelBonusScore, scrabbleScore];
 
@@ -127,9 +113,6 @@ function scorerPrompt(word) {
     return scorerPrompt(word);
   }
 }
-
-
-
 
 function runProgram() {
   let word = initialPrompt();
