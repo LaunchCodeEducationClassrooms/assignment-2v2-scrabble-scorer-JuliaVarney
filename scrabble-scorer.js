@@ -76,25 +76,25 @@ function vowelBonusScorer(word) {
   return letterPoint;
 }
 
-let simpleScore = {
+const scoringAlgorithms = [
+simpleScore = {
   name: 'Simple Score',
   description: 'Each letter is worth 1 point.',
   scoreFunction: simpleScorer
-};
+},
 
-let vowelBonusScore = {
+vowelBonusScore = {
   name: 'Vowel Bonus',
   description: 'Vowels are 3pts, constants are 1 pt.',
   scoreFunction: vowelBonusScorer
-};
+},
 
-let scrabbleScore = {
+scrabbleScore = {
   name: 'Scrabble',
   description: 'The traditional scoring algorithm.',
   scoreFunction: scrabbleScorer
-};
-
-const scoringAlgorithms = [simpleScore, vowelBonusScore, scrabbleScore];
+}
+]
 
 function initialPrompt() {
   return input.question("Let's play some Scrabble! \n\nEnter a word to score: ");
