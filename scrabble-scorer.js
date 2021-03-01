@@ -77,18 +77,15 @@ function vowelBonusScore(word) {
 }
 
 const scoringAlgorithms = [
-  Object (
- {name: 'Simple Score',
+  Object({name: 'Simple Score',
   description: 'Each letter is worth 1 point.',
   scoreFunction: simpleScore
 }),
-Object (
- {name: 'Vowel Bonus',
+Object({name: 'Vowel Bonus',
   description: 'Vowels are 3pts, constants are 1 pt.',
   scoreFunction: vowelBonusScore
 }),
-Object (
- {name: 'Scrabble',
+Object({name: 'Scrabble',
   description: 'The traditional scoring algorithm.',
   scoreFunction: scrabbleScore
 })
